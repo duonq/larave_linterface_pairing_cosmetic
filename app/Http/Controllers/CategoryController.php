@@ -25,7 +25,7 @@ class CategoryController extends Controller
     {
         // dd($request->only('name', 'status'));
         Category::create($request->only('name', 'status'));
-        return redirect()->route('category.index');
+        return redirect()->route('category.index')->with('success', 'Thêm mới thành công!');
     }
 
     public function show($id)
@@ -43,12 +43,12 @@ class CategoryController extends Controller
     {
         // dd($request->only('name','status'));
         $category->update($request->only('name', 'status'));
-        return redirect()->route('category.index');
+        return redirect()->route('category.index')->with('success', 'Chỉnh sửa thành công !');
     }
 
     public function destroy(Category $category)
     {
         $category->delete();
-        return redirect()->route('category.index');
+        return redirect()->route('category.index')->with('success', 'Xóa thành công !');
     }
 }
