@@ -7,6 +7,8 @@
   <div class="form-group">
     <label for="" class="form-label">Tên danh mục</label>
     <input type="text" class="form-control" name="name" placeholder="Tạo mới danh mục">
+
+    @error('name') {{$message}} @enderror
   </div>
 
   <div class="form-group">

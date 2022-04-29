@@ -43,7 +43,10 @@ Route::get('my-account', [HomeController::class, 'myAccount'])->name('my-account
 Route::get('wish-list', [HomeController::class, 'wishList'])->name('wish-list');
 Route::get('check-out', [HomeController::class, 'checkOut'])->name('check-out');
 
-Route::group(['prefix' => 'admin'], function(){
+Route::get('/admin/login', [AdminController::class, 'login'])->name('admin.login');
+Route::post('/admin/login', [AdminController::class, 'post_login'])->name('admin.login');
+
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
   Route::get('/', [AdminController::class, 'dashboard'])->name('admin.dashboard');
   Route::resources([
     'product' => ProductController::class,
