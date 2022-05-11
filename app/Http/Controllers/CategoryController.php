@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CategoryCreateRequest;
+use App\Http\Requests\CategoryEditRequest;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
@@ -13,7 +14,7 @@ class CategoryController extends Controller
     {
         $data = Category::search()->paginate(5);
 
-        // dd($search_val);
+        // dd($data);
         return view('siteAdmin.category.index', compact('data'));
     }
 
@@ -40,7 +41,7 @@ class CategoryController extends Controller
         return view('siteAdmin.category.edit', compact('category'));
     }
 
-    public function update(Request $request, Category $category)
+    public function update(CategoryEditRequest $request, Category $category)
     {
         // dd($request->only('name','status'));
         $category->update($request->only('name', 'status'));

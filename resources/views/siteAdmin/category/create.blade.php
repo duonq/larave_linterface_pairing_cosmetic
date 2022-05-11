@@ -1,5 +1,5 @@
 @extends('layout.admin')
-@section('title', 'Tạo mới danh mục')
+@section('title', 'Thêm mới danh mục')
 @section('main')
 
 <form action="{{ route('category.store') }}" method="post">

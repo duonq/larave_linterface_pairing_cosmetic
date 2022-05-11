@@ -17,8 +17,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $data = Category::search()->paginate(5);
-        return view('siteAdmin.product.index', compact('data'));
+        $cats = Category::orderBy('name', 'ASC')->get();
+        $data = Product::search()->paginate(5);
+        return view('siteAdmin.product.index', compact('data', 'cats'));
     }
 
     /**
@@ -46,19 +47,18 @@ class ProductController extends Controller
         $pathInfo = pathinfo($file_name);
         $ext = $pathInfo['extension'];
         $base_name = $pathInfo['filename'];
-        $final_name = Str::slug($base_name).'-'.$ext;
+        $final_name = Str::slug($base_name) . '-' . $ext;
         // dd($pathInfo);
         // dd($base_name);
         // dd(Str::slug($base_name).'-'.$ext);
         $check_upload = $request->upload->move(public_path('upload/'), $final_name);
         if ($check_upload) {
             $data['image'] = $final_name;
-        } 
+        }
         if (Product::create($data)) {
             return redirect()->route('product.index')->with('yes', 'Thêm mới thành công');
-        }else return redirect()->back()->with('no');
+        } else return redirect()->back()->with('no');
         dd($data);
-        
     }
 
     /**
@@ -78,9 +78,11 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Product $product)
     {
-        //
+        // dd($product);
+        $cats = Category::orderBy('name', 'ASC')->get();
+        return view('siteAdmin.product.edit', compact('cats', 'product'));
     }
 
     /**
@@ -90,9 +92,30 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Product $product)
     {
-        //
+        $data = $request->all('name', 'price', 'sale_price', 'category_id', 'status');
+        if ($request->has('upload')) {
+            $file_name = $request->upload->getClientOriginalName();
+            $pathInfo = pathinfo($file_name);
+            $ext = $pathInfo['extension'];
+            $base_name = $pathInfo['filename'];
+            $final_name = Str::slug($base_name) . '-' . $ext;
+            // dd($pathInfo);
+            // dd($base_name);
+            // dd(Str::slug($base_name).'-'.$ext);
+            $check_upload = $request->upload->move(public_path('upload/'), $final_name);
+            if ($check_upload) {
+                $data['image'] = $final_name;
+            }
+            // else {
+            //     $data['image'] = $product;
+            // }
+        }
+        $product->update($data);
+        return redirect()->route('product.index')->with('yes', 'Cập nhật thành công');
+
+        dd($data);
     }
 
     /**
@@ -101,8 +124,9 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $product)
     {
-        //
+        $product->delete();
+        return redirect()->route('product.index')->with('success', 'Xóa thành công !');
     }
 }
