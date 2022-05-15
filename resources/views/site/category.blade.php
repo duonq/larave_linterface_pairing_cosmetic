@@ -1,9 +1,8 @@
 @extends('layout.main')
-@section('title', 'Blogs page')
+@section('title', 'Shop page')
 @section('main')
-
 <!--title page-->
-<div class="title-page" style="background-image: url('file/imager/title-page1.jpg');background-position: center center;background-size: cover;">
+<div class="title-page" style="background-image: url('file/imager/shop/Shop_3Columns-title.jpg');background-position: center center;background-size: cover;">
   <div class="container">
     <div class="row">
       <div class=" col-md-6 inner-title-page">
@@ -13,212 +12,129 @@
   </div>
 </div>
 <!--end title page-->
-
-<!--content blog-->
-<div class="container">
-  <div class="row content-blog">
-    <div class="col-md-9">
-      <div class="content-blog-right">
-        <div class="item-blog">
-          <img src="{{url('file')}}/imager/blog/item-blog2.jpg" alt="">
-          <a href="#"><i class="far fa-heart"></i>&nbsp; Like 10</a> &nbsp;&nbsp;&nbsp;&nbsp;<a href="#"> <i class="far fa-calendar-alt">&nbsp;</i> April 12, 2019</a>
-          <h2>Temporibus autem quib</h2>
-          <p>
-            It is a long established fact that a reader will be distracted by the readable content of a page
-            when looking at its layout.
-            The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
-            opposed to using
-            'Content here, content here', making it look like readable English.
-          </p>
-          <div class="content-center">
-            <i class="fas fa-quote-left"></i>
-            <em>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-              voluptatum deleniti atque corrupti quos
-              dolores et quas molestias excepturi sint occaecati cupiditate non provident.</em>
-          </div>
-          <div>
-            <div class="card">
-              <div class="row no-gutters1">
-                <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
-                  <img src="{{url('file')}}/imager/blog/blog-single-item.jpg" class="card-img" alt="...">
-                </div>
-                <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
-                  <div class="card-body">
-                    <h5 class="card-title">Nam libero tempore cum soluta</h5>
-                    <p class="card-text">On the other hand, we denounce with righteous indignation
-                      and dislike men who are
-                      so beguiled and demoralized by the charms of pleasure of the moment, so
-                      blinded by desire. That they
-                      cannot foresee the pain. These cases are perfectly.</p>
-                    <p class="card-text">Trouble that are bound to ensue; and equal blame belongs to
-                      those who fail in their
-                      duty through weakness. which is the same as saying through shrinking from
-                      toil and pain.</p>
-                  </div>
-                </div>
-              </div>
+<!--content shop 4 colums-->
+<div class="container list-product">
+  <div class="content-shop-4colum">
+    <div class="row product">
+      @foreach($category->products as $product)
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12 col-12">
+        <div class="card">
+          <div class="card-img-top">
+            <a href="product-single.html" class="wp-post-image">
+              <img class="image-cover" src="{{ url('upload')}}/{{$product->image}}" alt="product">
+            </a>
+            <p class="onnew">New</p>
+            <div class="icon-product">
+              <button class="btn">
+                <span class="lnr lnr-lock"></span>
+              </button>
+              <button type="button" class="btn click-quick-view" data-toggle="modal" data-target="#exampleModalCenter">
+                <span class="lnr lnr-magnifier"></span>
+              </button>
+              <button class="btn">
+                <span class="lnr lnr-heart"></span>
+              </button>
             </div>
           </div>
-          <p>
-            But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain
-            was born and I will give you a complete
-            account of the system, and expound the actual teachings of the great explorer of the truth
-          </p>
-          <div class="float-left"><span class="lnr lnr-tag"></span>&nbsp;&nbsp;Beauty Skin Care Make Up</div>
-          <div class="float-right socials">
-            <table>
-              <tr>
-                <td><a href="#"><i class="fab fa-twitter"></i></a></td>
-                <td><a href="#"><i class="fab fa-facebook"></i></a></td>
-                <td><a href="#"><i class="fab fa-instagram"></i></a></td>
-              </tr>
-            </table>
-          </div>
-          <div class="slide-blog-single">
-            <div class="row control-slide-blog-single d-flex justify-content-between">
-              <div>
-                <a href="#">
-                  <span class="lnr lnr-arrow-left"></span>&nbsp;Previous post
-                </a>
-              </div>
-              <div><i class="fas fa-th"></i></div>
-              <div>
-                <a href="#">Next post&nbsp;<span class="lnr lnr-arrow-right"></span></a>
-              </div>
-            </div>
-
-            <h2>Comments</h2>
-            <div class="card" style="border-bottom: 1px solid #e6e6e6;">
-              <div class="row no-gutters">
-                <div class="col-md-2 col-sm-12 col-12">
-                  <img src="{{url('file')}}/imager/blog/item-coment-blog-single1.jpg" class="card-img" alt="...">
-                </div>
-                <div class="col-md-10 col-sm-12 col-12">
-                  <div class="card-body">
-                    <h5 class="card-title">Nam libero tempore cum soluta</h5>
-                    <p class="card-text">March 28, 2019</p>
-                    <span class="card-text">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore,
-                      cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere.</span>
-                  </div>
-                </div>
-              </div>
-              <a href="#">REPLY</a>
-            </div>
-            <div class="card">
-              <div class="row no-gutters">
-                <div class="col-md-2 col-sm-12 col-12">
-                  <img src="{{url('file')}}/imager/blog/item-coment-blog-single2.jpg" class="card-img" alt="...">
-                </div>
-                <div class="col-md-10 col-sm-12 col-12">
-                  <div class="card-body">
-                    <h5 class="card-title">Nam libero tempore cum soluta</h5>
-                    <p class="card-text">March 28, 2019</p>
-                    <span class="card-text">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore,
-                      cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere.</span>
-                  </div>
-                </div>
-              </div>
-              <a href="#">REPLY</a>
-            </div>
+          <div class="card-body">
+            <p class="card-title"><a href="product-list.html">{{$category->name}}</a></p>
+            <p class="woocommerce-loop-product__title"><a href="product-single.html">
+                {{$product->name}}</a></p>
+            <span class="price">
+              <ins>
+                <span class="woocommerce-Price-amount amount">
+                  <span class="woocommerce-Price-currencySymbol">$</span>{{$product->price}}
+                </span>
+              </ins>
+            </span>
           </div>
         </div>
-        <div class="post-comment">
-          <h2>Post a Comment</h2>
-          <textarea placeholder="Your comment *"></textarea>
-          <input type="text" placeholder="Your Name *">
-          <input type="text" placeholder="Your Mail *">
-          <button class="btn">SUBMIT</button>
-        </div>
+
       </div>
+      @endforeach
+
+      {{$products->links()}}
     </div>
-    <div class="col-md-3">
-      <div class="content-blog-left">
-        <div class="search-blog">
-          <input type="text" placeholder="Search" class="float-left">
-          <button class="btn float-right"><span class="lnr lnr-chevron-right"></span></button>
-        </div>
-        <div class="author-blog">
-          <img src="{{url('file')}}/imager/blog/author-blog.jpg" alt="">
-          <h3>Denise Murray</h3>
-          <small>denise_83@example.com</small>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit volupta.</p>
-        </div>
-        <div class="category-blog">
-          <h2>Categories</h2>
-          <a href="#"> Beauty (23)</a>
-          <a href="#">BB Creams (20)</a>
-          <a href="#">Make Up (31)</a>
-          <a href="#">Spa (08)</a>
-          <a href="#">Skin care (15)</a>
-        </div>
-
-        <div class="lastest-blog">
-          <h2>Latest Posts</h2>
-          <div class="card">
-            <div class="row no-gutters">
-              <div class="col-xl-4 col-lg-5 col-md-12 col-sm-6 col-6">
-                <div class="img-lastest-blog">
-                  <img src="{{url('file')}}/imager/blog/lastest-blog-item1.jpg" class="card-img" alt="...">
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content container">
+          <div class="product-single-quick-view">
+            <div class="row product_detail">
+              <div class="col-md-6 col-sm-12 col-12">
+                <div class="flex-quick-view">
+                  <div id="flex-slider" class="flexslider">
+                    <ul class="slides">
+                      <li>
+                        <img src="{{ url('file')}}/imager/product-detail/product_detail.jpg" alt="">
+                      </li>
+                      <li>
+                        <img src="{{ url('file')}}/imager/product-detail/product_detail.jpg" alt="">
+                      </li>
+                      <li>
+                        <img src="{{ url('file')}}/imager/product-detail/product_detail.jpg" alt="">
+                      </li>
+                      <li>
+                        <img src="{{ url('file')}}/imager/product-detail/product_detail.jpg" alt="">
+                      </li>
+                      <!-- items mirrored twice, total of 12 -->
+                    </ul>
+                  </div>
+                  <div id="flex-carousel" class="flexslider">
+                    <ul class="slides">
+                      <li>
+                        <img src="{{ url('file')}}/imager/product-detail/product_detail1.jpg" alt="">
+                      </li>
+                      <li>
+                        <img src="{{ url('file')}}/imager/product-detail/product_detail2.jpg" alt="">
+                      </li>
+                      <li>
+                        <img src="{{ url('file')}}/imager/product-detail/product_detail3.jpg" alt="">
+                      </li>
+                      <li>
+                        <img src="{{ url('file')}}/imager/product-detail/product_detail4.jpg" alt="">
+                      </li>
+                      <!-- items mirrored twice, total of 12 -->
+                    </ul>
+                  </div>
                 </div>
               </div>
-              <div class="col-xl-8 col-lg-7 col-md-12 col-sm-6 col-6">
-                <div class="card-body">
-                  <p class="card-text">April 12, 2019</p>
-                  <span class="card-text"><a href="#"> Sed ut perspiciatis</a></span>
+              <div class="col-md-6 col-sm-12 col-12 content-product">
+                <h2>Whitening cream | $65</h2>
+                <p><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> &nbsp; (2 customer
+                  review)</p>
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                  when an
+                  unknown printer took a galley of type and scrambled it to make a type specimen
+                  book.
+                  It has survived not only five centuries, but also the leap into electronic </p>
+                <div class="infor-product">
+                  <p><span>Sku: </span>22</p>
+                  <p><span>Category: </span>Cosmetic</p>
+                  <p><span>Tag: </span>Trendy</p>
+                  <p><span>Share: </span>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                  </p>
+                </div>
+                <div>
+                  <div class="btn-group">
+                    <button type="button" class="prev btn ">-</button>
+                    <button type="button" class="show-number btn ">1</button>
+                    <button type="button" class="next btn ">+</button>
+                  </div>
+                  <div class="btn-group">
+                    <a href="#" class="btn add-to-cart">ADD TO CART<p><i class="fas fa-cart-plus"></i></p> </a>
+                  </div>
                 </div>
               </div>
             </div>
+            <span class="lnr lnr-cross close-quick-view" data-dismiss="modal"></span>
           </div>
-          <div class="card">
-            <div class="row no-gutters">
-              <div class="col-xl-4 col-lg-5 col-md-12 col-sm-6 col-6">
-                <div class="img-lastest-blog">
-                  <img src="{{url('file')}}/imager/blog/lastest-blog-item2.jpg" class="card-img" alt="...">
-                </div>
-              </div>
-              <div class="col-xl-8 col-lg-7 col-md-12 col-sm-6 col-6">
-                <div class="card-body">
-                  <p class="card-text">April 12, 2019</p>
-                  <span class="card-text"><a href="#">Nemo enim ipsam</a></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="row no-gutters">
-              <div class="col-xl-4 col-lg-5 col-md-12 col-sm-6 col-6">
-                <div class="img-lastest-blog">
-                  <img src="{{url('file')}}/imager/blog/lastest-blog-item3.jpg" class="card-img" alt="...">
-                </div>
-              </div>
-              <div class="col-xl-8 col-lg-7 col-md-12 col-sm-6 col-6">
-                <div class="card-body">
-                  <p class="card-text">April 12, 2019</p>
-                  <span class="card-text"><a href="#">Nor again is there</a></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="tag-blog">
-          <h2>Tag</h2>
-          <div class="link-blog">
-            <a href="#">Nature</a>
-            <a href="#">Oragnic</a>
-            <a href="#">Fresh</a>
-            <a href="#">Vegan</a>
-            <a href="#">Spa</a>
-          </div>
-        </div>
-        <div class="lastest-img">
-          <img src="{{url('file')}}/imager/portfolio/Portfolio_Single_Images_item.jpg" alt="">
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<!--end content blog-->
-
+<!--end content shop 4 colums-->
 @stop()

@@ -14,10 +14,11 @@ class HomeController extends Controller
     // $category = Category::all();
     // dd($category);
     $category = Category::paginate(2);
-    $product_sale = Product::sale(4);
+    $product_sale = Product::sale();
     $product_new = Product::new(8);
-    // dd($product_sale);
-    return view('site.home', compact('category', 'product_sale', 'product_new'));
+    $product = Product::all();
+    // dd($product);
+    return view('site.home', compact('category', 'product_sale', 'product_new', 'product'));
   }
   public function about()
   {
@@ -80,7 +81,7 @@ class HomeController extends Controller
     return view('site.check-out');
   }
   public function category(Category $category){
-    // dd($category);
-    return view('site.category', compact('category'));
+    $products = $category->products()->paginate(12);
+    return view('site.category', compact('category', 'products'));
   }
 }

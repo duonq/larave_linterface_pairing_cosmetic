@@ -5,7 +5,6 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="../../cdn.linearicons.com/free/1.0.0/icon-font.min.css">
   <link rel="stylesheet" href="{{url('file')}}/asset/css/owl.carousel.css">
   <link rel="stylesheet" href="{{url('file')}}/asset/css/owl.theme.default.css">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -16,6 +15,7 @@
   <link href="{{url('file')}}/asset/css/all.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=El+Messiri:400,500,600,700|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,700,700i,800,800i,900,900i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Elsie" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
   <link rel="icon" href="favicon.png" type="image/png">
   <title>@yield('title')</title>
 </head>
@@ -57,14 +57,14 @@
                     <li><a href="{{route('home.category', $cat->id)}}">{{$cat->name}}</a></li>
                     @endforeach
                 </li>
-                <li><a href="{{route('cart')}}">Page</a><span class="lnr lnr-chevron-right"></span>
+                <!-- <li><a href="{{route('cart')}}">Page</a><span class="lnr lnr-chevron-right"></span>
                   <ul>
                     <li><a href="{{route('my-account')}}">My Account</a></li>
                     <li><a href="{{route('cart')}}">Cart</a></li>
                     <li><a href="{{route('wish-list')}}">Wish List</a></li>
                     <li><a href="{{route('check-out')}}">Check Out</a></li>
                   </ul>
-                </li>
+                </li> -->
               </ul>
               </li>
               <li><a href="{{route('blogs')}}">blog</a>
