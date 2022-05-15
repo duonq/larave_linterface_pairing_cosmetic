@@ -43,57 +43,37 @@
             <div class="menu">
               <ul>
                 <li><a href="{{route('home')}}" class="menu-active">home</a>
-                  <!-- <ul>
-                    <li><a href="index.html">Home Page_v1</a></li>
-                    <li><a href="index2.html">Home Page_v2</a></li>
-                    <li><a href="index3.html">Home Page_v3</a></li>
-                  </ul> -->
                 </li>
                 <li><a href="{{route('about')}}">page</a>
                   <ul>
                     <li><a href="{{route('about')}}">About Us</a></li>
                     <li><a href="{{route('offers')}}">What We Offer</a></li>
                     <li><a href="{{route('our-team')}}">Our Team</a></li>
-                    <!-- <li><a href="">Comming Soon</a></li> -->
-                    <!-- <li><a href="">Error Page</a></li> -->
                   </ul>
                 </li>
                 <li><a href="{{route('products')}}">shop</a>
                   <ul>
-                    <li><a href="{{route('products')}}">Product List</a></li>
-                    <li><a href="{{route('product-single')}}">Product Single</a></li>
-                    <li><a href="{{route('shop')}}">Layouts</a><span class="lnr lnr-chevron-right"></span>
-                      <!-- <ul>
-                        <li><a href="shop-2-colum.html">2 Colums</a></li>
-                        <li><a href="shop-3-colum.html">3 Colums</a></li>
-                        <li><a href="shop-4-colum.html">4 Colums</a></li>
-
-                      </ul> -->
-                    </li>
-                    <li><a href="{{route('cart')}}">Page</a><span class="lnr lnr-chevron-right"></span>
-                      <ul>
-                        <li><a href="{{route('my-account')}}">My Account</a></li>
-                        <li><a href="{{route('cart')}}">Cart</a></li>
-                        <li><a href="{{route('wish-list')}}">Wish List</a></li>
-                        <li><a href="{{route('check-out')}}">Check Out</a></li>
-                      </ul>
-                    </li>
-                  </ul>
+                    @foreach($cats as $cat)
+                    <li><a href="{{route('home.category', $cat->id)}}">{{$cat->name}}</a></li>
+                    @endforeach
                 </li>
-                <li><a href="{{route('blogs')}}">blog</a>
+                <li><a href="{{route('cart')}}">Page</a><span class="lnr lnr-chevron-right"></span>
                   <ul>
-                    <li><a href="{{route('blog-masonry')}}">Masonry</a></li>
-                    <!-- <li><a href="blog-standard-right-siderbar.html">Standard</a><span class="lnr lnr-chevron-right"></span>
-                      <ul>
-                        <li><a href="blog-standard-right-siderbar.html">Right Sidebar</a></li>
-                        <li><a href="blog-standard-left-siderbar.html">Left Sidebar</a></li>
-                        <li><a href="blog-standard-no-sliderbar.html">No Sidebar</a></li>
-                      </ul>
-                    </li> -->
-                    <li><a href="{{route('blog-single')}}">Single</a></li>
+                    <li><a href="{{route('my-account')}}">My Account</a></li>
+                    <li><a href="{{route('cart')}}">Cart</a></li>
+                    <li><a href="{{route('wish-list')}}">Wish List</a></li>
+                    <li><a href="{{route('check-out')}}">Check Out</a></li>
                   </ul>
                 </li>
-                <li><a href="{{route('contact')}}">contact</a></li>
+              </ul>
+              </li>
+              <li><a href="{{route('blogs')}}">blog</a>
+                <ul>
+                  <li><a href="{{route('blog-masonry')}}">Masonry</a></li>
+                  <li><a href="{{route('blog-single')}}">Single</a></li>
+                </ul>
+              </li>
+              <li><a href="{{route('contact')}}">contact</a></li>
               </ul>
             </div>
           </div>

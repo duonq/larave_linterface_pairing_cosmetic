@@ -34,11 +34,12 @@
           </div>
         </div>
         <div class="row product">
+          @foreach($product_sale as $ps)
           <div class="col-md-4 col-sm-6 col-12">
             <div class="card">
               <div class="card-img-top">
                 <a href="product-single.html" class="wp-post-image">
-                  <img class="image-cover" src="{{url('file')}}/imager/product/product.jpg" alt="product">
+                  <img class="image-cover" src="{{url('upload')}}/{{$ps->image}}" alt="product">
                 </a>
                 <p class="onnew">New</p>
                 <div class="icon-product">
@@ -55,12 +56,15 @@
               </div>
               <div class="card-body">
                 <p class="card-title"><a href="product-list.html">Beauty </a></p>
-                <p class="woocommerce-loop-product__title"><a href="product-single.html">
-                    Cleanser layde</a></p>
+                <p class="woocommerce-loop-product__title">
+                  <a href="product-single.html">
+                    {{$ps->name}}
+                  </a>
+                </p>
                 <span class="price">
                   <ins>
                     <span class="woocommerce-Price-amount amount">
-                      <span class="woocommerce-Price-currencySymbol">$</span>79
+                      <span class="woocommerce-Price-currencySymbol">$</span>{{$ps->price}}
                     </span>
                   </ins>
                 </span>
@@ -68,7 +72,8 @@
             </div>
 
           </div>
-          <div class="col-md-4 col-sm-6 col-12">
+          @endforeach
+          <!-- <div class="col-md-4 col-sm-6 col-12">
             <div class="card">
               <div class="card-img-top">
                 <a href="product-single.html" class="wp-post-image">
@@ -449,7 +454,7 @@
                 </span>
               </div>
             </div>
-          </div>
+          </div> -->
           <ul class="pagination justify-content-center">
             <li class="page-item"><a class="page-link" href="#">1</a></li>
             <li class="page-item"><a class="page-link" href="#">2</a></li>

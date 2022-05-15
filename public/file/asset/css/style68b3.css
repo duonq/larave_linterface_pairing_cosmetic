@@ -454,8 +454,8 @@
     left: 0;
     bottom: -10px;
     background: #ffa6a8;
-    -webkit-mask: url(imager/line-title2.svg) repeat left center;
-    mask: url(imager/line-title2.svg) repeat left center; }
+    -webkit-mask-image: url(file/imager/line-title2.svg) repeat left center;
+    mask-image: url(file/imager/line-title2.svg) repeat left center; }
   .inner-title-page p {
     color: #333333;
     font-family: 'Raleway', sans-serif;
@@ -530,8 +530,8 @@
       right: 0;
       bottom: -20px;
       background: #ffa6a8;
-      -webkit-mask: url(imager/line-title2.svg) repeat left center;
-      mask: url(imager/line-title2.svg) repeat left center; }
+      -webkit-mask-image: url(file/imager/line-title2.svg) repeat left center;
+      mask-image: url(file/imager/line-title2.svg) repeat left center; }
 .inner-about .content-inner-about-right {
   padding-top: 50px;
   z-index: 2; }
@@ -553,8 +553,8 @@
       left: 0;
       bottom: -20px;
       background: #ffa6a8;
-      -webkit-mask: url(imager/line-title2.svg) repeat left center;
-      mask: url(imager/line-title2.svg) repeat left center; }
+      -webkit-mask-image: url(file/imager/line-title2.svg) repeat left center;
+      mask-image: url(file/imager/line-title2.svg) repeat left center; }
   .inner-about .content-inner-about-right .img-icon-about {
     position: absolute;
     top: 0;
@@ -606,8 +606,8 @@
       left: 0;
       bottom: -10px;
       background: #ffa6a8;
-      -webkit-mask: url(imager/line-title2.svg) repeat left center;
-      mask: url(imager/line-title2.svg) repeat left center; }
+      -webkit-mask-image: url(file/imager/line-title2.svg) repeat left center;
+      mask-image: url(file/imager/line-title2.svg) repeat left center; }
     .intro-about .progress-intro-about span {
       position: absolute;
       color: #333333;
@@ -972,8 +972,8 @@
       left: 0;
       bottom: -20px;
       background: #ffa6a8;
-      -webkit-mask: url(imager/line-title2.svg) repeat left center;
-      mask: url(imager/line-title2.svg) repeat left center; }
+      -webkit-mask-image: url(file/imager/line-title2.svg) repeat left center;
+      mask-image: url(file/imager/line-title2.svg) repeat left center; }
     .cosmetic .inner-cosmetic p {
       font-size: 15px;
       font-family: 'Raleway', sans-serif;
@@ -1265,8 +1265,8 @@ i {
         margin-left: -45px;
         bottom: -20px;
         background: #ffa6a8;
-        -webkit-mask: url(imager/line-title2.svg) repeat left center;
-        mask: url(imager/line-title2.svg) repeat left center; }
+        -webkit-mask-image: url(file/imager/line-title2.svg) repeat left center;
+        mask-image: url(file/imager/line-title2.svg) repeat left center; }
       .content-masonry .card .card-body p {
         border-bottom: 1px solid #e6e6e6;
         padding-bottom: 20px;
@@ -1514,8 +1514,8 @@ i {
     left: 50%;
     margin-left: -75px;
     background: #ffa6a8;
-    -webkit-mask: url(imager/line-title2.svg) repeat left center;
-    mask: url(imager/line-title2.svg) repeat left center; }
+    -webkit-mask-image: url(file/imager/line-title2.svg) repeat left center;
+    mask-image: url(file/imager/line-title2.svg) repeat left center; }
   .title h3 {
     font-family: 'El Messiri', sans-serif;
     font-size: 40px;
@@ -1531,8 +1531,8 @@ i {
     margin-left: -55px;
     bottom: -10px;
     background: #ffa6a8;
-    -webkit-mask: url(imager/line-title2.svg) repeat left center;
-    mask: url(imager/line-title2.svg) repeat left center; }
+    -webkit-mask-image: url(file/imager/line-title2.svg) repeat left center;
+    mask-image: url(file/imager/line-title2.svg) repeat left center; }
 
 .product-out .carousel-indicators {
   bottom: -15px; }
@@ -1726,8 +1726,8 @@ i {
     left: 50%;
     margin-left: -75px;
     background: white;
-    -webkit-mask: url(imager/line-title2.svg) repeat left center;
-    mask: url(imager/line-title2.svg) repeat left center; }
+    -webkit-mask-image: url(file/imager/line-title2.svg) repeat left center;
+    mask-image: url(file/imager/line-title2.svg) repeat left center; }
   .content-deal-day ul {
     margin-bottom: 80px; }
     .content-deal-day ul li {
@@ -2125,7 +2125,7 @@ i {
       left: 0;
       bottom: -15px;
       background: #ffa6a8;
-      -webkit-mask-image: url(imager/line-title2.svg);
+      -webkit-mask-image: url(file/imager/line-title2.svg);
       -webkit-mask-size: contain; }
     .content-blog-left .filter-price p {
       width: 100%;
@@ -2183,7 +2183,7 @@ i {
     left: 0;
     bottom: -15px;
     background: #ffa6a8;
-    -webkit-mask-image: url(imager/line-title2.svg);
+    -webkit-mask-image: url(file/imager/line-title2.svg);
     -webkit-mask-size: contain; }
   .content-blog-left .popular-item .card {
     border: none; }
@@ -2232,7 +2232,7 @@ i {
       left: 0;
       bottom: -15px;
       background: #ffa6a8;
-      -webkit-mask-image: url(imager/line-title2.svg);
+      -webkit-mask-image: url(file/imager/line-title2.svg);
       -webkit-mask-size: contain; }
     .content-blog-left .category-blog a {
       margin-top: 20px;
@@ -2258,7 +2258,7 @@ i {
     left: 0;
     bottom: -15px;
     background: #ffa6a8;
-    -webkit-mask-image: url(imager/line-title2.svg);
+    -webkit-mask-image: url(file/imager/line-title2.svg);
     -webkit-mask-size: contain; }
   .content-blog-left .lastest-blog .card {
     text-align: left;
@@ -2305,7 +2305,7 @@ i {
       left: 0;
       bottom: -15px;
       background: #ffa6a8;
-      -webkit-mask-image: url(imager/line-title2.svg);
+      -webkit-mask-image: url(file/imager/line-title2.svg);
       -webkit-mask-size: contain; }
     .content-blog-left .tag-blog .link-blog {
       width: 100%; }
@@ -2775,8 +2775,8 @@ i {
         margin-left: -75px;
         bottom: -15px;
         background: #fecbcc;
-        -webkit-mask: url(imager/line-title2.svg) repeat left center;
-        mask: url(imager/line-title2.svg) repeat left center; }
+        -webkit-mask-image: url(file/imager/line-title2.svg) repeat left center;
+        mask-image: url(file/imager/line-title2.svg) repeat left center; }
     .item-homepage .content-item-homepage .inner-banner-section:before {
       content: " ";
       position: absolute;
@@ -3423,8 +3423,8 @@ i {
         left: 0;
         bottom: -20px;
         background: #ffa6a8;
-        -webkit-mask: url(imager/line-title2.svg) repeat left center;
-        mask: url(imager/line-title2.svg) repeat left center; }
+        -webkit-mask-image: url(file/imager/line-title2.svg) repeat left center;
+        mask-image: url(file/imager/line-title2.svg) repeat left center; }
       .product-what-we-offer .product-what-we-offer-left .product-what-we-offer-content p {
         font-size: 15px;
         color: #807e7e;
@@ -3500,8 +3500,8 @@ i {
         right: 0;
         bottom: -20px;
         background: #ffa6a8;
-        -webkit-mask: url(imager/line-title2.svg) repeat left center;
-        mask: url(imager/line-title2.svg) repeat left center; }
+        -webkit-mask-image: url(file/imager/line-title2.svg) repeat left center;
+        mask-image: url(file/imager/line-title2.svg) repeat left center; }
       .product-what-we-offer .product-what-we-offer-right .product-what-we-offer-content p {
         font-size: 15px;
         color: #807e7e;
@@ -3712,8 +3712,8 @@ i {
       margin-left: -65px;
       bottom: 10px;
       background: white;
-      -webkit-mask: url(imager/line-title2.svg) repeat left center;
-      mask: url(imager/line-title2.svg) repeat left center; }
+      -webkit-mask-image: url(file/imager/line-title2.svg) repeat left center;
+      mask-image: url(file/imager/line-title2.svg) repeat left center; }
     .error .content-error img {
       margin-top: -90px; }
     .error .content-error h2 {
@@ -3794,8 +3794,8 @@ i {
     margin-left: -85px;
     bottom: -30px;
     background: white;
-    -webkit-mask: url(imager/line-title2.svg) repeat left center;
-    mask: url(imager/line-title2.svg) repeat left center; }
+    -webkit-mask-image: url(file/imager/line-title2.svg) repeat left center;
+    mask-image: url(file/imager/line-title2.svg) repeat left center; }
   .deal-day-comming .content-comming .title img {
     margin-top: 20px; }
 
@@ -4047,8 +4047,8 @@ i {
         margin-left: -95px;
         bottom: -10px;
         background: white;
-        -webkit-mask: url(imager/line-title2.svg) repeat left center;
-        mask: url(imager/line-title2.svg) repeat left center; }
+        -webkit-mask-image: url(file/imager/line-title2.svg) repeat left center;
+        mask-image: url(file/imager/line-title2.svg) repeat left center; }
     .contact-from .content-contact-from .submit-contact {
       width: 100%;
       text-align: center;
@@ -4382,8 +4382,8 @@ i {
       left: 0;
       bottom: -10px;
       background: #ffa6a8;
-      -webkit-mask: url(imager/line-title2.svg) repeat left center;
-      mask: url(imager/line-title2.svg) repeat left center; }
+      -webkit-mask-image: url(file/imager/line-title2.svg) repeat left center;
+      mask-image: url(file/imager/line-title2.svg) repeat left center; }
     .contact-us .content-contact-us ul {
       margin-bottom: 70px; }
       .contact-us .content-contact-us ul p {
@@ -4501,8 +4501,8 @@ i {
       left: 50%;
       margin-left: -75px;
       background: #ffa6a8;
-      -webkit-mask: url(imager/line-title2.svg) repeat left center;
-      mask: url(imager/line-title2.svg) repeat left center; }
+      -webkit-mask-image: url(file/imager/line-title2.svg) repeat left center;
+      mask-image: url(file/imager/line-title2.svg) repeat left center; }
   .content-homepage-home3 .layer-content-homepage {
     width: 100%;
     position: relative; }
@@ -4672,8 +4672,8 @@ i {
     left: 0;
     bottom: -15px;
     background: #ffa6a8;
-    -webkit-mask: url(imager/line-title2.svg) repeat left center;
-    mask: url(imager/line-title2.svg) repeat left center; }
+    -webkit-mask-image: url(file/imager/line-title2.svg) repeat left center;
+    mask-image: url(file/imager/line-title2.svg) repeat left center; }
   .best-new .product .title-best-new .btn-left {
     border-bottom-left-radius: 50%;
     border-top-left-radius: 50%;

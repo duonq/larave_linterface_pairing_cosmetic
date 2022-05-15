@@ -51,7 +51,7 @@
         </div>
 
       </div>
-      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12 col-12">
+      <!-- <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12 col-12">
         <div class="card">
           <div class="card-img-top">
             <a href="product-single.html" class="wp-post-image">
@@ -429,7 +429,7 @@
             </span>
           </div>
         </div>
-      </div>
+      </div> -->
       <ul class="pagination justify-content-center">
         <li class="page-item"><a class="page-link" href="#">1</a></li>
         <li class="page-item"><a class="page-link" href="#">2</a></li>
